@@ -124,5 +124,13 @@ async def lifespan(_: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
+@app.get("/")
+async def index():
+   return {"message": "Hello World"}
+@app.get("/")
+async def root():
+   return {"message": "Hello World"}
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app")
