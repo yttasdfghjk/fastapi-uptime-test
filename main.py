@@ -129,9 +129,9 @@ app = FastAPI(lifespan=lifespan)
 async def index():
    return {"message": "Hello World"}
 
-@app.get("/health")
+@app.get("/home")
 async def root():
-   return {"message": "Hello World"}
+   return {"message": "Hello Home"}
     
 class HealthCheck(BaseModel):
     """Response model to validate and return when performing a health check."""
